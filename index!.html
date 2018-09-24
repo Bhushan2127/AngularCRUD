@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="./app!.js"></script>
+        <!-- <script src="./controller!.js"></script> -->
+        
+    </head>
+
+    <body ng-app = "myApp">
+
+        <div ng-controller="mycontrol1">
+            <p ng-hide="hideUsername">
+                    Username: <input type ="text" ng-model ="uname">
+                    <span ng-bind ="uname"></span>
+            </p>   
+            <p>
+                    Password: <input type ="text" ng-model ="pword">
+                    <span ng-bind ="pword"></span>
+            </p>
+
+            <p>
+                <button ng-click ="submitFunc()">SUBMIT</button>
+                <span ng-show = "showSuccess">
+                    You have sucessfully logged In :)
+                </span>
+                    
+                <span ng-show = "showError">
+                    Unsuccessful Authentication :(
+                </span>
+            </p>
+
+        </div>    
+
+
+
+
+     </body>
+
+    
+</html>
